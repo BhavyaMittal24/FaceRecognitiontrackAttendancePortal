@@ -18,6 +18,7 @@ In the attendance list page, the lecturer can visualize the attendance data by c
 After the attendance, the teacher can even close the attendance room so that no more transactions will be done by students.
 
 This was a part of my MS Engage Project
+Here's a link to the original repo : https://github.com/bhavy24/FaceRecog_Attendance
 
 
 

@@ -1,41 +1,48 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const { ApolloServer, PubSub } = require('apollo-server');
+const { ApolloServer, PubSub } = require("apollo-server");
 
-const mongoose = require('mongoose');
- 
-const typeDefs = require('./graphql/typeDefs');
+const mongoose = require("mongoose");
 
-const resolvers = require('./graphql/resolvers');
+const typeDefs = require("./graphql/typeDefs");
+
+const resolvers = require("./graphql/resolvers");
 
 const pubsub = new PubSub();
 
 const PORT = process.env.PORT || 4000;
 
-var env = process.env.NODE_ENV || 'development';
+var env = process.env.NODE_ENV || "development";
 
 const server = new ApolloServer({
   cors: {
-    origin: env=="development"? ['http://localhost:3000'] : ['https://attendlytical.netlify.app'],
-    credentials: true
+    origin:
+      env == "development"
+        ? ["http://localhost:3000"]
+        : ["https://attendlytical.netlify.app"],
+    credentials: true,
   },
   typeDefs,
   resolvers,
   context: ({ req }) => ({ req, pubsub }),
 });
 
-mongoose.set('useCreateIndex', true);
-mongoose.set('useFindAndModify', false);
+mongoose.set("useCreateIndex", true);
+mongoose.set("useFindAndModify", false);
 
 // Username : Bhavya247
 // Password : Ipad12345
+// new mongoDB url string on personal account
 mongoose
-  .connect("mongodb+srv://Bhavya247:Ipad12345@bhavyacluster.k54yoiq.mongodb.net/?retryWrites=true&w=majority", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://Bhavya247:Ipad12345@bhavyacluster.k54yoiq.mongodb.net/?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
-    console.log('MongoDB Connected');
+    console.log("MongoDB Connected");
     return server.listen({ port: PORT });
   })
   .then((res) => {
