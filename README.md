@@ -1,41 +1,3 @@
-# YES MA'AM 
-
-## Requirements
-Dependency managers such as npm, yarn, brew, etc.
-I would encourage the usage of npm.
-Download and install NodeJS and nodemon if you don'thave them: https://nodejs.org/en/download/
-Ensure the latest version of Node JS and npm have been installed in your machine.
-
-### Step 1: Download the source code
-If you have "git" installed, open CMD and type "git clone https://github.com/bhavy24/FaceRecog_Attendance.git".
-### Step 2: Install the dependency
-Open project in Visual Studio Code or any IDE.
-Open CMD in VSCode or terminal, change directory to "client" folder and install the dependency 
-commands 
-1)`cd client`
-2)`npm i`
-Open another terminal, change directory to "server" folder and install the dependency 
-commands 
-1)`cd server` 
-2)`npm i`
-3)`npm install dotenv`
-
-## To run the project:
-### step1)
-In the server folder: cd server
-then, use the command : `nodemon server` or `node index.js`
-
-### step2)
-In the client folder: cd client
-then, use the command : `npm start`
-
-## Technologies Used : 
-### 1) React JS
-### 2) Node Js
-### 3) Express
-### 4) MongoDb
-### 5) Cloudinary(to store images)
-
 I have used face-api.js which is a JavaScript face recognition API for the browser and nodejs implemented on top of tensorflow.js core (tensorflow/tfjs-core).
 For further info, look into
 [Face-Api](https://github.com/justadudewhohacks/face-api.js/).
@@ -54,6 +16,8 @@ The lecturer can also "Kick" a student out of a course.<br>
 The face photo of the student who is kicked out will not be counted next time taking the attendance.
 In the attendance list page, the lecturer can visualize the attendance data by clicking the "Attendance Record" button in the action tab.<br>
 After the attendance, the teacher can even close the attendance room so that no more transactions will be done by students.
+
+This was a part of my MS Engage Project
 
 
 
