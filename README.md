@@ -2,9 +2,6 @@ I have used face-api.js which is a JavaScript face recognition API for the brows
 For further info, look into
 [Face-Api](https://github.com/justadudewhohacks/face-api.js/).
 
-### Link for my demo video:
-[BhavyaMittalDEMO](https://drive.google.com/file/d/1sRZLriNq9k7xJf6kF1h5mUwfqoL1WZXv/view?usp=sharing)
-
 ## Features of YES MAAM
 The web app enables tracking attendance using facial recognition. The application allows a new user to sign up as a lecturer or a student. The student upon signing up has to upload two photos(from webcam or disk) to get the facial features stored in 128Dimensions. 
 The student can enroll in a course based on a course id and can view his attendance. <br>The app gives functionality to the lecturer to create any course of his choice. For that given course, the teacher can create an attendance form either in Remote Mode or 
